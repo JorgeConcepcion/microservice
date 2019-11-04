@@ -6,10 +6,12 @@
 # Step 1:
 # Create dockerpath
 # dockerpath=<your docker ID/path>
-
+dockerpath=jorgeconcep/sklearnapp
 # Step 2:  
 # Authenticate & tag
 echo "Docker ID and Image: $dockerpath"
-
+docker login --username=jorgeconcep 
+docker tag sklearnapp jorgeconcep/sklearnapp
 # Step 3:
 # Push image to a docker repository
+docker push jorgeconcep/sklearnapp:latest
